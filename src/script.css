@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+    background-color: #0F0E0E;
+    color: #EEEEEE;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav{
+    display: flex;
+    padding: 2rem 3rem;
+    align-items:center;
+    justify-content: space-between;
+    box-shadow: 0;
+    color: #EEEEEE;
+    z-index: 999;
+    box-shadow: 
+    0 0 10px #EEEEEE;
+}
+
+.logo{
+    cursor: pointer;
+    letter-spacing: var(--tracking-tighter);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.logo:hover{
+    text-shadow: 
+    0 0 10px #EEEEEE,
+    0 0 40px #EEEEEE;
+}
+
+.nav-menu a{
+    display: none;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #EEEEEE;
+    transition: 0.5s;
+}
+
+.nav-menu a:hover{
+    transition: 0.5s;
+    text-shadow: 
+    0 0 10px #EEEEEE,
+    0 0 40px #EEEEEE;
+}
+
+.hidden{
+    display: none;
+}
+
+.mobile-menu{
+    padding: 4rem;
+}
+
+.home{
+    transition: 0.5s;
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    object-fit:fill;
+    width: 50%;
+    aspect-ratio: 1/1;
+}
+
+.hero-image img{
+    width: 100%;
+    height: 90%;
+}
+
+.introduction{
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.introduction p{
+    margin: 0.4rem 0;
+}
+
+.hero-name span{
+    font-size:2rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px #541212;
+}
+
+.hero-name{
+    font-size: 1.3rem;
+}
+
+.hero-button{
+    display: inline-block;
+    background-color: #541212;
+    padding: 10px 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition:0.5s;
+}
+
+.hero-button:hover{
+    transition: 0.5s;
+    box-shadow: 
+    0 0 10px #541212,
+    0 0 40px #541212;
+}
+
+.skill-title{
+    margin: 2rem;
+    text-shadow: 
+    0 0 10px #541212,
+    0 0 40px #541212;
+    text-align: center;
+}
+
+.skill-card-container{
+    margin: 2rem 0;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.skill-card{
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 3rem 0;
+    padding: 1.5rem 1.5rem;
+    border: 1px solid #EEEEEE;
+    border-radius: 20px;
+    box-shadow: 
+    0 0 10px #EEEEEE;
+}
+
+.skill-card h3{
+    margin: 1rem 0;
+}
+
+.skill-card:hover{
+    transition: 0.5s;
+    transform: translateY(-20px);
+    box-shadow: 
+    0 0 10px #EEEEEE,
+    0 0 40px #EEEEEE;
+}
+
+.skill-card img{
+    width: 100%;
+}
+
+.skill-card h3{
+    text-align: center;
+}
+
+@media (min-width: 600px){
+    .nav-menu{
+        display: flex;
+    }
+    .nav-menu a{
+        display: block;
+    }
+    .burger{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .hero{
+        display: contents;
+    }
+    .hero-image{
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .introduction{
+        width: 100%;
+    }
+
+    .hero-button{
+        padding: 10px 9rem;
+    }
+}
