@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="src/script.css">
+    <link rel="icon" type="image/x-icon" href="public/icon/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/6f63cd3ddc.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <audio autoplay loop><source src="public/icon/audioplay.mp3"></audio>
+    <audio autoplay loop id="bgMusic"><source src="public/icon/audioplay.mp3"></audio>
     <section class="header">
         <nav class="nav">
             <div class="logo">
                 <p>RHEXXXX</p>
             </div>
             <div class="nav-menu hidden">
-                <a href="#home"><p>Home</p></a>
+                <a href="/"><p>Home</p></a>
                 <a href="#skill"><p>Skills</p></a>
-                <a href=""><p>CONTACT</p></a>
+                <a href="#contact"><p>CONTACT</p></a>
+                <a href="#" id="musicToggle"><p>Music : Off</p></a>
             </div>
             <button class="burger">
                 <i data-lucide="menu" style="color:#EEEEEE"></i>
             </button>
         </nav>
         <div id="mobile-menu" class="mobile-menu hidden">
-            <a href=""><p>HOME</p></a>
-            <a href=""><p>HACKING</p></a>
-            <a href=""><p>CONTACT</p></a>
+            <a href="/"><p>Home</p></a>
+                <a href="#skill"><p>Skills</p></a>
+                <a href="#contact"><p>CONTACT</p></a>
+                <a href="#" id="musicToggle"><p>Music : Off</p></a>
         </div>
     </section>
     <section class="hero" id="home">
@@ -61,15 +65,75 @@
             <div class="skill-card">
                 <img src="public/img/skill3.png" alt="">
                 <h3>PHP & LARAVEL</h3>
-                <p>Basics to made and build website from scratch, but only a static one</p>
+                <p>fullstack website development using PHP and it's framework, Laravel to build a complete website</p>
             </div>
             <div class="skill-card">
                 <img src="public/img/skill4.png" alt="">
                 <h3>UI/UX Design</h3>
-                <p>Basics to made and build website from scratch, but only a static one</p>
+                <p>Designing and brainstorming about a concept of a project before applying it into css</p>
             </div>
         </div>
     </section>
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h1>Get In Touch</h1>
+            <p>Have a project in mind? Let's collaborate and create something amazing together</p>
+            <form class="form" id="contactForm" action="">
+                <div class="input">
+                    <label for="name" class="label"><i class="fa-regular fa-id-badge"></i>Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input">
+                    <label for="phone" class="label"><i class="fa-solid fa-phone"></i>Phone Number</label>
+                    <input type="number" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="input">
+                    <label for="subject" class="label"><i class="fa-solid fa-envelopes-bulk"></i>Subject</label>
+                    <input type="text" name="subject" placeholder="What's this about" required>
+                </div>
+                <div class="input message">
+                    <label for="message" class="label"><i class="fa-solid fa-comment"></i>Message</label>
+                    <input type="text" name="message" placeholder="Tell me about your project.." required>
+                </div>
+                <div class="button">
+                    <button id="submit" type="submit" class="btn"><i class="fa-solid fa-arrow-up-from-bracket"></i>Submit</button>
+                    <button id="reset" type="reset" class="btn"><i class="fa-solid fa-arrow-rotate-left" required></i>Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <h3 class="logo">RHEXXXX</h3>
+        <div class="footer-below">
+            <div class="footer-info">
+                <h3>contact</h3>
+                <p><span>Address:</span> Jl. Tukad Bilok No.68, Sanur Kauh, Denpasar Selatan, Kota Denpasar, Bali 80239</p>
+                <p><span>Phone:</span> +62 817 7092 3814</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/rheinoperean_/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@rheinoxxxx" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://github.com/rhexxxx" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigation</h4>
+                <a href="/"><p>Home</p></a>
+                <a href="#skill"><p>Skills</p></a>
+                <a href="#contact"><p>CONTACT</p></a>
+                <a href="#" id="musicToggle"><p>Music : Off</p></a>
+            </div>
+        </div>
+        <div class="footer-cp">
+            <p>Copywrite @rheino 2026 Progress</p>
+        </div>
+    </footer>
+    <div class="modal" id="popupModal">
+        <div class="modalContent">
+            <h3 id="popupTitle"></h3>
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()" class="btn-close">OK</button>
+        </div>
+    </div>
     <script src="src/style.js"></script>
 </body>
 </html>
